@@ -12,6 +12,6 @@
 /captures
 .externalNativeBuild
 .cxx
-/.vpnLib/build
-/.app/build
+/vpnLib/build
+/app/build
 
