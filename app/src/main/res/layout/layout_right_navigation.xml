@@ -5,15 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/rightNav"
-    android:paddingTop="50dp">
+    android:paddingTop="50dp"
+    >
 
     <TextView
-        android:gravity="center"
-        android:textColor="#ffffff"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="Выбрать сервер 💎"
-        android:textAllCaps="true"/>
+        android:textColor="#ffffff" />
 
     <TextView
         android:layout_marginLeft="10dp"

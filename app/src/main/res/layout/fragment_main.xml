@@ -22,11 +22,10 @@
             android:layout_centerHorizontal="true"
             android:layout_marginStart="20dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="-122dp"
             android:orientation="vertical"
 
-            android:visibility="invisible"
-            >
+            android:visibility="invisible">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -54,11 +53,10 @@
             android:layout_height="55dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginLeft="1dp"
-            android:layout_marginTop="618dp"
-            android:layout_marginBottom="620dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="77dp"
+            android:layout_marginLeft="77dp"
+            android:layout_marginTop="233dp"
             android:src="@drawable/russia" />
 
         <TextView
@@ -163,6 +161,35 @@
 
             android:visibility="invisible"
             />
+
+        <Button
+            android:id="@+id/bottomsheet"
+            android:layout_width="277dp"
+            android:layout_height="48dp"
+
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+
+            android:layout_marginBottom="445dp"
+            android:background="@drawable/selectserver"
+            android:text="" />
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="648dp"
+
+            android:layout_marginLeft="648dp"
+
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="648dp"
+            android:layout_marginRight="648dp"
+            app:srcCompat="@drawable/logo_main" />
 
     </RelativeLayout>
 

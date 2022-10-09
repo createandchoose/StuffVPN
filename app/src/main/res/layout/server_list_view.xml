@@ -23,7 +23,6 @@
         android:layout_width="315dp"
         android:layout_height="wrap_content"
         android:text="united kingdom"
-        android:textAllCaps="true"
         android:textColor="@color/colorWhite"
         android:textStyle="normal" />
 </LinearLayout>
