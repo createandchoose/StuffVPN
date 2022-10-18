@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import com.lazycoder.cakevpn.BottomSheetActivity;
 import com.lazycoder.cakevpn.R;
 import com.lazycoder.cakevpn.adapter.ServerListRVAdapter;
 import com.lazycoder.cakevpn.interfaces.ChangeServer;
@@ -22,7 +23,14 @@ import com.lazycoder.cakevpn.model.Server;
 
 import java.util.ArrayList;
 
+
+
+
 import com.lazycoder.cakevpn.Utils;
+
+
+
+
 
 
 public class MainActivity extends AppCompatActivity implements NavItemClickListener {
@@ -35,6 +43,33 @@ public class MainActivity extends AppCompatActivity implements NavItemClickListe
     private ChangeServer changeServer;
 
     public static final String TAG = "Stuff.VPN";
+
+
+    public void openBottomSheetActivity (View view) {
+        BottomSheetActivity bottomSheetActivity = new BottomSheetActivity();
+        bottomSheetActivity.show(getSupportFragmentManager(),"BottomSheetActivity");
+
+
+            serverListRVAdapter = new ServerListRVAdapter(serverLists, this);
+            serverListRv.setAdapter(serverListRVAdapter);
+
+
+            drawer = findViewById(R.id.drawer_layout);
+
+            fragment = new MainFragment();
+            serverListRv = findViewById(R.id.serverListRv);
+            serverListRv.setHasFixedSize(true);
+
+            serverListRv.setLayoutManager(new LinearLayoutManager(this));
+
+            serverLists = getServerList();
+            changeServer = (ChangeServer) fragment;
+
+
+
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -135,3 +170,5 @@ public class MainActivity extends AppCompatActivity implements NavItemClickListe
         changeServer.newServer(serverLists.get(index));
     }
 }
+
+

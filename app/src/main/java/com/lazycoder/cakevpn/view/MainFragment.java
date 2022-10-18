@@ -38,6 +38,7 @@ import de.blinkt.openvpn.core.OpenVPNService;
 import de.blinkt.openvpn.core.OpenVPNThread;
 import de.blinkt.openvpn.core.VpnStatus;
 
+
 import static android.app.Activity.RESULT_OK;
 
 public class MainFragment extends Fragment implements View.OnClickListener, ChangeServer {
@@ -51,6 +52,8 @@ public class MainFragment extends Fragment implements View.OnClickListener, Chan
     private SharedPreference preference;
 
     private FragmentMainBinding binding;
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
