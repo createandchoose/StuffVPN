@@ -12,17 +12,19 @@
 
     <View
         android:layout_width="50dp"
-        android:layout_height="5dp"
+        android:layout_height="4dp"
         android:background="#FFFFFF"
-        android:layout_margin="20dp"/>
+        android:layout_margin="10dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="20dp"
+        android:fontFamily="@font/seymour_one"
         android:text="Выбор сервера"
         android:textColor="#FFFFFF"
+
         android:textSize="24sp"
         android:textStyle="bold" />
 

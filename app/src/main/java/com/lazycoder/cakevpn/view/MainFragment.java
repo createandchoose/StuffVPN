@@ -282,33 +282,40 @@ public class MainFragment extends Fragment implements View.OnClickListener, Chan
         if (status.equals("connect")) {
 
             binding.vpnBtn.setBackgroundResource(R.drawable.button);
-            binding.conn.setText("");
+            binding.conn.setText("Не подключен");
             binding.onooffimg.setImageResource(R.drawable.state_off);
+            binding.imageViewlogo.setImageResource(R.drawable.logo_main);
 
         } else if (status.equals("connecting")) {
 
+            binding.imageViewlogo.setImageResource(R.drawable.logo_connection);
             binding.vpnBtn.setBackgroundResource(R.drawable.button_connecting);
             binding.conn.setText("Подключение");
 
         } else if (status.equals("connected")) {
 
             binding.vpnBtn.setBackgroundResource(R.drawable.button_connected);
-            binding.conn.setText("Вы защищены");
+            binding.conn.setText("Подключен");
             binding.onooffimg.setImageResource(R.drawable.state_on);
+            binding.imageViewlogo.setImageResource(R.drawable.logo_connected);
 
         } else if (status.equals("tryDifferentServer")) {
 
             binding.vpnBtn.setBackgroundResource(R.drawable.button_connected);
             binding.vpnBtn.setText("Try Different\nServer");
+            binding.imageViewlogo.setImageResource(R.drawable.logo_connected);
         } else if (status.equals("loading")) {
             binding.vpnBtn.setBackgroundResource(R.drawable.button);
             binding.vpnBtn.setText("Loading Server..");
+            binding.imageViewlogo.setImageResource(R.drawable.logo_main);
         } else if (status.equals("invalidDevice")) {
             binding.vpnBtn.setBackgroundResource(R.drawable.button_connected);
             binding.vpnBtn.setText("Invalid Device");
+            binding.imageViewlogo.setImageResource(R.drawable.logo_connected);
         } else if (status.equals("authenticationCheck")) {
             binding.vpnBtn.setBackgroundResource(R.drawable.button_connecting);
             binding.vpnBtn.setText("Authentication \n Checking...");
+            binding.imageViewlogo.setImageResource(R.drawable.logo_connection);
         }
 
     }
@@ -332,7 +339,7 @@ public class MainFragment extends Fragment implements View.OnClickListener, Chan
                 String byteIn = intent.getStringExtra("byteIn");
                 String byteOut = intent.getStringExtra("byteOut");
 
-                if (duration == null) duration = "";
+                if (duration == null) duration = "00:00:00";
                 if (lastPacketReceive == null) lastPacketReceive = "0";
                 if (byteIn == null) byteIn = " ";
                 if (byteOut == null) byteOut = " ";

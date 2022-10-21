@@ -24,22 +24,26 @@
 
         </LinearLayout>
 
+
         <LinearLayout
             android:id="@+id/connectionStatus"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="82dp"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="-122dp"
             android:orientation="vertical"
 
-            android:visibility="invisible">
+            >
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="274dp"
+                android:layout_marginLeft="274dp"
                 android:layout_marginTop="15dp"
+                android:layout_marginBottom="187dp"
                 android:text="Connection Status"
                 android:textColor="@color/colorWhite"
                 android:textSize="15sp"
@@ -50,13 +54,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
+                android:layout_marginBottom="225dp"
                 android:text="Packet Received:"
                 android:textColor="@color/colorWhite"
                 android:textSize="14sp" />
 
         </LinearLayout>
-
-
 
         <TextView
             android:id="@+id/logTv"
@@ -81,20 +84,25 @@
             android:layout_marginRight="30dp"
 
 
-            android:layout_marginBottom="188dp"
+            android:layout_marginBottom="282dp"
             android:background="@drawable/button"
             android:tag="1"
             android:text=""
             android:textColor="@color/colorWhite"
             android:textSize="16sp" />
 
+
         <ImageView
             android:id="@+id/onooffimg"
             android:layout_width="57dp"
             android:layout_height="77dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="238dp"
+            android:layout_marginEnd="177dp"
+            android:layout_marginRight="177dp"
+            android:layout_marginBottom="339dp"
             android:elevation="999dp"
             android:src="@drawable/state_off" />
 
@@ -106,10 +114,10 @@
             android:layout_centerHorizontal="true"
 
             android:layout_marginLeft="10dp"
-            android:layout_marginBottom="122dp"
-            android:text=""
+            android:layout_marginBottom="202dp"
+            android:text="00:00:00"
 
-            android:textColor="@color/colorWhite"
+            android:textColor="#666666"
             android:textSize="14sp" />
 
         <TextView
@@ -118,50 +126,55 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="148dp"
-            android:text=""
-            android:textColor="#fff" />
-
-        <TextView
-            android:id="@+id/byteOutTv"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="63dp"
-            android:layout_marginLeft="63dp"
-            android:layout_marginBottom="387dp"
-            android:text=" "
-            android:textColor="@color/colorWhite"
-            android:textSize="14sp"
-            android:visibility="invisible" />
+            android:layout_marginEnd="79dp"
+            android:layout_marginRight="79dp"
+            android:layout_marginBottom="228dp"
+            android:fontFamily="@font/seymour_one"
+            android:text="Не подключен"
+            android:textColor="#fff"
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/byteInTv"
-            android:layout_width="100dp"
-            android:layout_height="20dp"
+            android:layout_width="118dp"
+            android:layout_height="60dp"
             android:layout_alignParentStart="true"
 
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="271dp"
+            android:layout_marginStart="261dp"
 
 
-            android:layout_marginLeft="271dp"
-            android:layout_marginEnd="65dp"
-            android:layout_marginRight="65dp"
-            android:layout_marginBottom="387dp"
+            android:layout_marginLeft="261dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginRight="22dp"
+            android:layout_marginBottom="108dp"
+            android:fontFamily="@font/seymour_one"
             android:text=""
             android:textColor="@color/colorWhite"
-            android:textSize="14sp"
 
-            android:visibility="invisible" />
+            android:textSize="14sp" />
 
-
-
+        <TextView
+            android:id="@+id/byteOutTv"
+            android:layout_width="133dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="21dp"
+            android:layout_marginLeft="21dp"
+            android:layout_marginEnd="247dp"
+            android:layout_marginRight="247dp"
+            android:layout_marginBottom="113dp"
+            android:fontFamily="@font/seymour_one"
+            android:text=" "
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp" />
 
         <Button
             android:id="@+id/bottomsheet"
@@ -183,7 +196,7 @@
             android:text="" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/imageViewlogo"
             android:layout_width="191dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -197,17 +210,17 @@
             app:srcCompat="@drawable/logo_main" />
 
 
-
         <ImageView
             android:id="@+id/selectedServerIcon"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
+            android:layout_width="58dp"
+            android:layout_height="60dp"
+
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="28dp"
-            android:layout_marginLeft="28dp"
-            android:layout_marginBottom="102dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginBottom="283dp"
             android:src="@drawable/russia" />
 
     </RelativeLayout>
